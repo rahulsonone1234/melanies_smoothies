@@ -27,7 +27,7 @@ st.write("The name on your smoothie will be:", name_on_order)
 
 
 # Get the current credentials
-cnx=st.connection("Snowflake")
+cnx=st.connection("snowflake")
 session=cnx.session()
 # session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('Fruit_name'))
